@@ -48,20 +48,12 @@ function App() {
 
   return (
     <>
-      <div id="canvas-container" style={{border:"2px solid green", height:"90vh", width:"90vw"}}>
+      <div id="canvas-container" style={{border:"2px solid black", height:"90vh", width:"90vw"}}>
         <Canvas 
-          camera={{position:[10,10,10]}}>
+          camera={{position:[100,100,100]}}>
           <ambientLight intensity={0.1} />
-          <directionalLight color="green" position={[3,2,5]} />
+          <directionalLight color="blue" position={[3,2,5]} />
           <mesh>
-            <boxGeometry 
-              args={[2,2,2]} 
-              color="blue"
-               />
-            <Line
-              color={"black"}
-              points={[[2,2,2],[1,1,1]]}
-            />
             {Points.map((point, index)=>(
               <Line key={index} color={"black"} points={[[point[0]["X"],point[0]["Y"],point[0]["Z"]],[point[1]["X"],point[1]["Y"],point[1]["Z"]]]} />
             ))}

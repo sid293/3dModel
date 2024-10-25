@@ -2,9 +2,10 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  width:100%;
-  height:100%;
-  border:2px solid green;
+  padding:0;
+  margin:0;
+  width:99%;
+  height:99%;
 
   /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
@@ -29,8 +30,9 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* min-width: 320px; */
+  min-height: 99vh;
+  min-width: 99vh;
 }
 
 h1 {
