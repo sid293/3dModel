@@ -13,7 +13,7 @@ function App() {
   const [Points, setPoints] = useState([]);
 
   const readExcel = async () => {
-    const response = await fetch('/public/Sample.xlsx'); 
+    const response = await fetch('/Sample.xlsx'); 
     const arrayBuffer = await response.arrayBuffer();
     const workbook = XLSX.read(arrayBuffer, { type: 'array' });
     const sheetName = workbook.SheetNames[0]; 
@@ -22,8 +22,6 @@ function App() {
     const worksheet2 = workbook.Sheets[sheetName2];
     const jsonData = XLSX.utils.sheet_to_json(worksheet);
     const jsonData2 = XLSX.utils.sheet_to_json(worksheet2);
-    // console.log("json data: ",jsonData); 
-    // console.log("json data2: ",jsonData2); 
     setMembers(jsonData);
     setNode(jsonData2);
   };
